@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import NextLink from 'next/link';
 import Image from 'next/image'
 
 import AppBar from '@mui/material/AppBar';
@@ -6,51 +7,55 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import { Link } from "@mui/material";
 
-import {
-    styled,
-    alpha,
-} from '@mui/material/styles';
+import MainAppBarSearch from "./MainAppBarSearch";
+import MainAppBarMenu from "./MainAppBarMenu";
+import appBarStyles from "../styles/appBarStyles";
 
-import MainAppBarSearch from "./mainAppBarSearch";
-import MainAppBarMenu from "./mainAppBarMenu";
 
 const MainAppBar: NextPage = () => {
-
+    const classes = appBarStyles();
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position='sticky' sx={{ backgroundColor: "lightblue" }}>
+        <Box className={classes.grow}>
+            <AppBar position='sticky' className={classes.navbar}>
                 <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="mt-logo"
-                        sx={{ mr: 2 }}
-                    >
-                        <Image
-                            src='/img/mt-logo-color.png'
-                            alt='mt-logo'
-                            height={30}
-                            width={60}
-                        />
-                    </IconButton>
+                    <NextLink href="/" passHref>
+                        <Link>
+                            <div className={classes.brand}>
+                                <IconButton
+                                    size="large"
+                                    edge="start"
+                                    color="inherit"
+                                    aria-label="mt-logo"
+                                    sx={{ mr: 2 }}
+                                >
+                                    <Image
+                                        src='/img/mt-logo-color.png'
+                                        alt='mt-logo'
+                                        height={30}
+                                        width={60}
+                                    />
+                                </IconButton>
+                                <Typography
+                                    variant="h6"
+                                    fontWeight="bold"
+                                    noWrap
+                                    component="div"
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                    className={classes.brandTitle}
+                                >
+                                    MyTradables
+                                </Typography>
+                            </div>
+                        </Link>
+                    </NextLink>
 
-                    <Typography
-                        variant="h6"
-                        fontWeight="bold"
-                        noWrap
-                        component="div"
-                        sx={{ display: { xs: 'none', sm: 'block' } }}
-                    >
-                        MyTradables
-                    </Typography>
-
-                    <Box sx={{ flexGrow: 1 }} />
+                    <Box className={classes.grow} />
 
                     <MainAppBarSearch />
 
-                    <Box sx={{ flexGrow: 1 }} />
+                    <Box className={classes.grow} />
 
                     <MainAppBarMenu />
 
