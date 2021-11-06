@@ -19,7 +19,7 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
-                About us
+           <Link href="aboutus"> About us </Link>
             </Button>
 
             <Button

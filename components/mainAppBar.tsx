@@ -21,7 +21,7 @@ const MainAppBar: NextPage = () => {
             <AppBar position='sticky' className={classes.navbar}>
                 <Toolbar>
                     <NextLink href="/" passHref>
-                        <Link>
+                        <Link href="">
                             <div className={classes.brand}>
                                 <IconButton
                                     size="large"
