@@ -3,6 +3,7 @@ import Layout from '../../components/Layout';
 import TradablesDisplay from '../../components/TradablesDisplay';
 import { fetchItems } from '../api/dbCalls';
 
+
 export async function getServerSideProps() {
     const itemData = await fetchItems();
     return {

@@ -1,7 +1,8 @@
 import { NextPage } from "next";
-
+import * as React from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
 const MainAppBarMenu: NextPage = () => {
 
@@ -32,7 +33,7 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
-                Pricing
+              <Link href="pricing">  Pricing</Link>
             </Button>
 
             <Box sx={{ flexGrow: 1 }} />

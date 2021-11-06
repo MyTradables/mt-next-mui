@@ -14,8 +14,28 @@ export type Item = {
     attributes: {[key: string]: string},
 };
 
+export type Category = {
+    id: string,
+    name: string,
+    shortDescription: string,
+    description: string,
+    image: string,
+    attributes: {[key: string]: string},
+};
+
+export type Subscription = {
+    id: string,
+    title: string,
+    name: string,
+    description: string,
+    image: string,
+    color: string,
+    features: [],
+};
+
 export type ItemData = {
     data: {
         Items: Item[]
     }
 } 
+
