@@ -11,7 +11,7 @@ export type Item = {
     subCategory: string,
     creationDateTime: string,
     images: string[],
-    attributes: {[key: string]: string},
+    attributes: { [key: string]: string },
 };
 
 export type Category = {
@@ -20,7 +20,7 @@ export type Category = {
     shortDescription: string,
     description: string,
     image: string,
-    attributes: {[key: string]: string},
+    attributes: { [key: string]: string },
 };
 
 export type Subscription = {
@@ -30,12 +30,12 @@ export type Subscription = {
     description: string,
     image: string,
     color: string,
-    features: [],
+    features: string[],
 };
 
 export type ItemData = {
     data: {
         Items: Item[]
     }
-} 
+}
 
