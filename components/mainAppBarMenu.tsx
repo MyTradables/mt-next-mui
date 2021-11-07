@@ -8,6 +8,19 @@ const MainAppBarMenu: NextPage = () => {
 
     return (
         <>
+        <Button
+                variant="text"
+                size="large"
+                sx={{
+                    height: 54,
+                    display: {
+                        xs: 'none',
+                        lg: 'block',
+                    },
+                }}
+            >
+           <Link href="tradables"> Tradables </Link>
+            </Button>
             <Button
                 variant="text"
                 size="large"
