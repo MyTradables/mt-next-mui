@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { Container } from '@mui/material';
-import MainAppBar from './MainAppBar';
 import layoutStyles from '../styles/layoutStyles';
 import Footer from './footer';
+import MainAppBar from './mainAppBar';
 
 const Layout = ({ title, children }) => {
     const classes = layoutStyles();
