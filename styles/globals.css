@@ -24,4 +24,9 @@ a {
 .boxshadow{
   box-shadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px';
 }
-
+.MuiCard-root{
+  transition: all 0.5s;
+}
+.MuiCard-root:hover{
+  transform: scale(1.02);
+}
