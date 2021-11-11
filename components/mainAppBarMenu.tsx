@@ -32,6 +32,19 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
+           <Link href="categories"> Categories </Link>
+            </Button>
+            <Button
+                variant="text"
+                size="large"
+                sx={{
+                    height: 54,
+                    display: {
+                        xs: 'none',
+                        lg: 'block',
+                    },
+                }}
+            >
            <Link href="aboutus"> About us </Link>
             </Button>
 
