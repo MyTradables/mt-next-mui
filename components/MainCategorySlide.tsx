@@ -16,15 +16,15 @@ const MainCategorySlide = ({ categoryData }: any) => {
            <Grid item md={3} key={category.id} zeroMinWidth>
            <NextLink href={`/categories/${category.name}`} passHref>
          <Link>
-           <Card sx={{ maxWidth: 345 }}>
+           <Card sx={{ maxWidth: 345, margin: '10px', boxShadow: 3 }}>
              <CardMedia
                component="img"
                height="194"
                image={category.image}
                alt={category.name}
              />
-             <CardContent>
-               <Typography variant="h5" color="text.secondary">
+             <CardContent sx={{padding: '10px !important'}}>
+               <Typography variant="h6" color="text.secondary">
                  {category.name}
                </Typography>
              </CardContent>

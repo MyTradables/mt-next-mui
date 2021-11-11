@@ -8,9 +8,20 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 * {
   box-sizing: border-box;
 }
+.MuiCardMedia-img{
+  padding:10px;
+  border-radius:15px;
+  box-shadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px';
+  
+}
+
+.boxshadow{
+  box-shadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px';
+}
+
