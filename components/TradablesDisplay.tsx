@@ -63,7 +63,7 @@ const TradablesDisplay = ({ itemData }: any) => {
 
                         <Card sx={{ maxWidth: 345, boxShadow: 3, backgroundColor:'#e7f7ff'}}>
                             <CardHeader
-                            sx={{backgroundColor: '#b8edff', boxShadow: 2, marginBottom: '5px' }}
+                            sx={{backgroundColor: '#b8edff', boxShadow: 3 }}
                                 avatar={
                                     <NextLink href={`/traders/${item.owner}`} passHref>
                                         <Link>

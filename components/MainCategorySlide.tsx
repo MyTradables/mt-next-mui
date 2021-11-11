@@ -13,10 +13,10 @@ const MainCategorySlide = ({ categoryData }: any) => {
     <Box display="flex" justifyContent="center" alignItems="center" sx={{mt: 10}}>
             <Grid container spacing={0}>
         {categoryData.map((category: Category) => (
-           <Grid item md={3} key={category.id} zeroMinWidth>
+           <Grid item md={4} key={category.id} zeroMinWidth>
            <NextLink href={`/categories/${category.name}`} passHref>
          <Link>
-           <Card sx={{ maxWidth: 345, margin: '10px', boxShadow: 3 }}>
+           <Card sx={{ maxWidth: 345, margin: '10px', boxShadow: 3,backgroundColor: '#e7f7ff' }}>
              <CardMedia
                component="img"
                height="194"

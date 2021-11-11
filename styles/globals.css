@@ -15,8 +15,8 @@ a {
   box-sizing: border-box;
 }
 .MuiCardMedia-img{
-  padding:10px;
-  border-radius:15px;
+  /* padding:10px;
+  border-radius:15px; */
   box-shadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px';
   
 }
@@ -28,5 +28,5 @@ a {
   transition: all 0.5s;
 }
 .MuiCard-root:hover{
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
