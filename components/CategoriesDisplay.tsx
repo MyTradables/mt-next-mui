@@ -7,8 +7,10 @@ import { Box } from "@mui/system";
 import { Grid, Link } from "@mui/material";
 import { Category } from "../utils/types";
 import NextLink from "next/link";
+import cardStyles from "../styles/cardStyle";
 
 const CategoriesDisplay = ({ categoryData }: any) => {
+  const classes = cardStyles();
   return (
     <Box
       display="flex"
@@ -28,7 +30,7 @@ const CategoriesDisplay = ({ categoryData }: any) => {
                     boxShadow: 3,
                     backgroundColor: "#e7f7ff",
                   }}
-                >
+                className={classes.Card}>
                   <CardMedia
                     component="img"
                     height="194"

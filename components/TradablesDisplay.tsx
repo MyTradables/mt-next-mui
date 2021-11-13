@@ -29,11 +29,12 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import VerticalToggleButtons from './Toggle';
+import cardStyles from "../styles/cardStyle";
 
 
   
 const TradablesDisplay = ({ itemData }: any) => {
-
+    const classes = cardStyles();
     const [settings, setSettings] = React.useState(null);
     const [share, setShare] = React.useState(null);
 
@@ -61,7 +62,7 @@ const TradablesDisplay = ({ itemData }: any) => {
                 {itemData.map((item: Item) => (
                     <Grid item md={4} key={item.id} zeroMinWidth>
 
-                        <Card sx={{ maxWidth: 345, boxShadow: 3, backgroundColor:'#e7f7ff'}}>
+                        <Card sx={{ maxWidth: 345, boxShadow: 3, backgroundColor:'#e7f7ff'}} className={classes.Card}>
                             <CardHeader
                             sx={{backgroundColor: '#b8edff', boxShadow: 3 }}
                                 avatar={

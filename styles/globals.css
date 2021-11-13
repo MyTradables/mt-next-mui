@@ -25,9 +25,9 @@ a {
   box-shadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px';
 }
 .MuiCard-root{
-  transition: all 0.5s;
+  transition: all 0.3s;
   border-radius: 20px;
 }
 .MuiCard-root:hover{
-  transform: scale(1.015);
+  /* transform: scale(1.015); */
 }
