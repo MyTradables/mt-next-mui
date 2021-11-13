@@ -1,17 +1,15 @@
 import { NextPage } from "next";
 import NextLink from 'next/link';
 import Image from 'next/image'
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { Link } from "@mui/material";
-
-import MainAppBarSearch from "./MainAppBarSearch";
-import MainAppBarMenu from "./MainAppBarMenu";
 import appBarStyles from "../styles/appBarStyles";
+import MainAppBarMenu from "./mainAppBarMenu";
+import MainAppBarSearch from "./mainAppBarSearch";
 
 
 const MainAppBar: NextPage = () => {
@@ -21,20 +19,20 @@ const MainAppBar: NextPage = () => {
             <AppBar position='sticky' className={classes.navbar}>
                 <Toolbar>
                     <NextLink href="/" passHref>
-                        <Link>
+                        <Link href="">
                             <div className={classes.brand}>
                                 <IconButton
                                     size="large"
                                     edge="start"
                                     color="inherit"
                                     aria-label="mt-logo"
-                                    sx={{ mr: 2 }}
+                                    sx={{ mr: 1.5 }}
                                 >
                                     <Image
-                                        src='/img/mt-logo-color.png'
+                                        src='/img/bee.svg'
                                         alt='mt-logo'
-                                        height={30}
-                                        width={60}
+                                        height={50}
+                                        width={70}
                                     />
                                 </IconButton>
                                 <Typography

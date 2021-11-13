@@ -13,6 +13,7 @@ import {
     Link,
     Menu,
     MenuItem,
+    ToggleButton,
     Typography
 } from '@mui/material'
 import {
@@ -27,11 +28,17 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
-;
+import VerticalToggleButtons from './Toggle';
+import cardStyles from "../styles/cardStyle";
 
+
+  
 const TradablesDisplay = ({ itemData }: any) => {
+    const classes = cardStyles();
     const [settings, setSettings] = React.useState(null);
     const [share, setShare] = React.useState(null);
+
+    
 
     const openSettings = Boolean(settings);
     const openShare = Boolean(share);
@@ -48,13 +55,16 @@ const TradablesDisplay = ({ itemData }: any) => {
     };
 
     return (
+        <>
+        <VerticalToggleButtons />
         <Box display="flex" justifyContent="center" alignItems="center" sx={{mt: 10}}>
             <Grid container spacing={3}>
                 {itemData.map((item: Item) => (
-                    <Grid item md={3} key={item.id} zeroMinWidth>
+                    <Grid item md={4} key={item.id} zeroMinWidth>
 
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 345, boxShadow: 3, backgroundColor:'#e7f7ff'}} className={classes.Card}>
                             <CardHeader
+                            sx={{backgroundColor: '#b8edff', boxShadow: 3 }}
                                 avatar={
                                     <NextLink href={`/traders/${item.owner}`} passHref>
                                         <Link>
@@ -85,12 +95,15 @@ const TradablesDisplay = ({ itemData }: any) => {
                             />
                             <NextLink href={`/tradables/${item.category}/${item.subCategory}/${item.id}`} passHref>
                                 <Link>
+                           
                                     <CardMedia
                                         component="img"
-                                        height="194"
+                                        height="350"
                                         image={item.images[0]}
                                         alt={item.title}
+
                                     />
+                                
                                 </Link>
                             </NextLink>
 
@@ -100,7 +113,7 @@ const TradablesDisplay = ({ itemData }: any) => {
                                 </Typography>
                             </CardContent>
 
-                            <CardActions disableSpacing>
+                            <CardActions sx={{backgroundColor: '#b8edff', padding:'5px', boxShadow: 1 }} disableSpacing>
                                 <IconButton aria-label="add to favorites">
                                     <Favorite />
                                 </IconButton>
@@ -136,7 +149,7 @@ const TradablesDisplay = ({ itemData }: any) => {
                         vertical: "top",
                         horizontal: "left",
                     }}
-                >
+                >   
                     <MenuItem onClick={handleClosed}>Trader</MenuItem>
                     <MenuItem onClick={handleClosed}>Offer maken</MenuItem>
                     <MenuItem onClick={handleClosed}>Favorieten</MenuItem>
@@ -169,7 +182,8 @@ const TradablesDisplay = ({ itemData }: any) => {
                 </Menu>
             </Grid>
         </Box>
-    )
+        </>
+    )  
 }
 
 export default TradablesDisplay;

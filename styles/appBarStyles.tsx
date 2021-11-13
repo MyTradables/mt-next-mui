@@ -17,7 +17,8 @@ const appBarStyles = makeStyles({
     brandTitle: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: '5px'
     },
     grow: {
         flexGrow: 1
