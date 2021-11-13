@@ -8,7 +8,7 @@ const MainAppBarMenu: NextPage = () => {
 
     return (
         <>
-        <Button
+            <Button
                 variant="text"
                 size="large"
                 sx={{
@@ -19,7 +19,7 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
-           <Link href="tradables"> Tradables </Link>
+                <Link href="tradables"> Tradables </Link>
             </Button>
             <Button
                 variant="text"
@@ -32,7 +32,7 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
-           <Link href="categories"> Categories </Link>
+                <Link href="categories"> Categories </Link>
             </Button>
             <Button
                 variant="text"
@@ -45,7 +45,7 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
-           <Link href="aboutus"> About us </Link>
+                <Link href="aboutus"> About us </Link>
             </Button>
 
             <Button
@@ -59,7 +59,7 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
-              <Link href="pricing">  Pricing</Link>
+                <Link href="pricing">  Pricing</Link>
             </Button>
 
             <Box sx={{ flexGrow: 1 }} />
@@ -75,7 +75,7 @@ const MainAppBarMenu: NextPage = () => {
                     },
                 }}
             >
-                Register/Login
+                <Link href="login">Register/Login</Link>
             </Button>
         </>)
 }

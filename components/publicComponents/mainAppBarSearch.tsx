@@ -9,7 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-import { categoryOptionsList } from "../public/data/categoryOptionsList";
+import { categoryOptionsList } from "../../public/data/categoryOptionsList";
 
 const MainAppBarSearch: NextPage = () => {
     /**

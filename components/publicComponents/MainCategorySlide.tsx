@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import { Grid, Link } from "@mui/material";
-import { Category } from "../utils/types";
+import { Category } from "../../utils/types";
 import NextLink from "next/link";
 
 const MainCategorySlide = ({ categoryData }: any) => {
