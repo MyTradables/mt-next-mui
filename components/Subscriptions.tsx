@@ -36,23 +36,24 @@ const useStyles = makeStyles({
 export default function Subscriptions() {
   return (
     <>
-      <AppBar position="static" sx={{ marginTop: "10%" }}>
-        <Typography
-          variant="h3"
-          component="div"
-          align="center"
-          sx={{ flexGrow: 1, margin: "20px" }}
-        >
-          Subscription Pricing
-        </Typography>
-      </AppBar>
+      <Box sx={{ borderRadius:"25px" }}>
+        <Paper sx={{ marginTop: "10%" }}>
+          <Typography
+            variant="h3"
+            component="div"
+            align="center"
+            sx={{ flexGrow: 1, padding: "20px", backgroundColor:"#add8e6", color:"white" }}
+          >
+            Subscriptions
+          </Typography>
+        </Paper>
+      </Box>
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
         sx={{ mt: 10 }}
       >
-        
         <Grid container spacing={0}>
           {subscriptions.map((subscription: Subscription) => (
             <Grid item md={4} key={subscription.id} zeroMinWidth>
@@ -74,15 +75,22 @@ export default function Subscriptions() {
                     component="img"
                     height="250"
                     image={subscription.image}
-               
                     alt="subscription image"
                   />
                 </div>
                 <div>
                   {subscription.features.map((feature, j) => (
                     <Accordion key={j}>
-                      <AccordionSummary><Typography variant="subtitle2">{feature.title}</Typography></AccordionSummary>
-                      <AccordionDetails><Typography variant="body2">{feature.description}</Typography></AccordionDetails>
+                      <AccordionSummary>
+                        <Typography variant="subtitle2">
+                          {feature.title}
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography variant="body2">
+                          {feature.description}
+                        </Typography>
+                      </AccordionDetails>
                     </Accordion>
                   ))}
                 </div>

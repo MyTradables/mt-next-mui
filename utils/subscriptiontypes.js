@@ -4,7 +4,7 @@ export const subscriptions = [
     title: "FREE",
     name: "FREE",
     description: "This is a free membership",
-    color:"#add8e6",
+    color:"#c5ffe1",
     image: "/img/free.jpg",
     features: [
       {
@@ -26,7 +26,7 @@ export const subscriptions = [
     title: "Premium",
     name: "Premium",
     description: "This is a Premium membership",
-    color:"#4aa5ff",
+    color:"#87ceeb",
     image: "/img/premium.jpg",
     features: [
       {
@@ -48,7 +48,7 @@ export const subscriptions = [
     title: "Gold",
     name: "Gold",
     description: "This is a Gold membership",
-    color:"#2267b7",
+    color:"#ffd700",
     image: "/img/gold.jpg",
     features: [
       {

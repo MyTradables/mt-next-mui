@@ -26,6 +26,7 @@ a {
 }
 .MuiCard-root{
   transition: all 0.5s;
+  border-radius: 20px;
 }
 .MuiCard-root:hover{
   transform: scale(1.015);
