@@ -57,7 +57,7 @@ export default function Subscriptions() {
         <Grid container spacing={0}>
           {subscriptions.map((subscription: Subscription) => (
             <Grid item md={4} key={subscription.id} zeroMinWidth>
-              <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ margin:"15px"}}>
                 <Typography
                   sx={{
                     bgcolor: `${subscription.color}`,
