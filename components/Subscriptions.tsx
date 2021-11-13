@@ -19,6 +19,7 @@ import {
   Link,
   Menu,
   MenuItem,
+  Paper,
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -33,12 +34,15 @@ const useStyles = makeStyles({
 });
 
 export default function Subscriptions() {
-  const classes = useStyles();
-
   return (
     <>
-      <AppBar position="static" sx={{ marginTop: '10%' }}>
-        <Typography variant="h3" component="div" align="center" sx={{ flexGrow: 1, margin: '20px' }}>
+      <AppBar position="static" sx={{ marginTop: "10%" }}>
+        <Typography
+          variant="h3"
+          component="div"
+          align="center"
+          sx={{ flexGrow: 1, margin: "20px" }}
+        >
           Subscription Pricing
         </Typography>
       </AppBar>
@@ -48,71 +52,39 @@ export default function Subscriptions() {
         alignItems="center"
         sx={{ mt: 10 }}
       >
-
+        
         <Grid container spacing={0}>
           {subscriptions.map((subscription: Subscription) => (
             <Grid item md={4} key={subscription.id} zeroMinWidth>
               <Card sx={{ maxWidth: 345 }}>
-                <Typography sx={{
-                  bgcolor: `${subscription.color}`,
-                  color: 'white',
-                  padding: '15px'
-
-                }} align="center" variant="h4">
+                <Typography
+                  sx={{
+                    bgcolor: `${subscription.color}`,
+                    color: "white",
+                    padding: "15px",
+                  }}
+                  align="center"
+                  variant="h4"
+                >
                   {subscription.title}
                 </Typography>
 
                 <div>
                   <CardMedia
                     component="img"
-                    height="140"
-                    image="subscription image"
+                    height="250"
+                    image={subscription.image}
+               
                     alt="subscription image"
                   />
                 </div>
                 <div>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="1"
-                    >
-                      <Typography>{subscription.features[0]}</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        {subscription.description}
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="2"
-                    >
-                      <Typography>{subscription.features[1]}</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Blabla you can only have 10 items in your inventory.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="3"
-                    >
-                      <Typography>{subscription.features[2]}</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Blabla you can only have 10 items in your inventory.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                  {subscription.features.map((feature, j) => (
+                    <Accordion key={j}>
+                      <AccordionSummary><Typography variant="subtitle2">{feature.title}</Typography></AccordionSummary>
+                      <AccordionDetails><Typography variant="body2">{feature.description}</Typography></AccordionDetails>
+                    </Accordion>
+                  ))}
                 </div>
                 <CardActions>
                   <Button size="small" color="primary">

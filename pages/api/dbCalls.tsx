@@ -5,6 +5,13 @@ export async function fetchItem(id:string) {
 
     return item;
 }
+export async function fetchCategory(id:string) {
+    const res = await fetch("https://erikku.design/mytradables/categories.json");
+    const categoryData = await res.json();
+    const category = categoryData.find(category => category.id === id)
+
+    return category;
+}
 
 export async function fetchItems() {
     const res = await fetch("https://erikku.design/mytradables/db.json");

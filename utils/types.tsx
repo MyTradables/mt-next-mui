@@ -20,6 +20,7 @@ export type Category = {
     shortDescription: string,
     description: string,
     image: string,
+    subcategory: string[];
     attributes: { [key: string]: string },
 };
 
@@ -30,7 +31,20 @@ export type Subscription = {
     description: string,
     image: string,
     color: string,
-    features: string[],
+    features: [
+        {
+          "title": "feature 1",
+          "description": "Beschrijving van feature 1",
+        },
+        {
+          "title": "feature 2",
+          "description": "Beschrijving van feature 2",
+        },
+        {
+          "title": "feature 3",
+          "description": "Beschrijving van feature 3",
+        }     
+      ],
 };
 
 export type ItemData = {
