@@ -26,13 +26,13 @@ const MainAppBar: NextPage = () => {
                                     edge="start"
                                     color="inherit"
                                     aria-label="mt-logo"
-                                    sx={{ mr: 2 }}
+                                    sx={{ mr: 1.5 }}
                                 >
                                     <Image
-                                        src='/img/mt-logo-color.png'
+                                        src='/img/bee.svg'
                                         alt='mt-logo'
-                                        height={30}
-                                        width={60}
+                                        height={50}
+                                        width={70}
                                     />
                                 </IconButton>
                                 <Typography
