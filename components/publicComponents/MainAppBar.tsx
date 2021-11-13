@@ -7,7 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { Link } from "@mui/material";
-import appBarStyles from "../styles/appBarStyles";
+import appBarStyles from "../../styles/appBarStyles";
 import MainAppBarMenu from "./mainAppBarMenu";
 import MainAppBarSearch from "./mainAppBarSearch";
 

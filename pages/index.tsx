@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Layout from '../components/Layout'
-import MainCategorySlide from '../components/MainCategorySlide';
+import MainCategorySlide from '../components/publicComponents/MainCategorySlide';
 import { fetchCategories } from './api/dbCalls';
 
 export async function getServerSideProps() {
